@@ -1,1 +1,27 @@
 @import 'semantic-ui';
+
+.navbottom {
+  margin-bottom: 0px !important;
+}
+
+.parallax-like {
+    background: url("home") no-repeat center center; /* DEFINE IMAGE PATH CAREFULLY*/
+    padding: 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+.parallax-like .overlay {
+    min-height: 750px;
+    background: rgba(35, 133, 161,0);
+    font-size: 40px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+.centering-text {
+  text-align: right;;
+  color: #a9a9a9 !important;
+}

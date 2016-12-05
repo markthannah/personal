@@ -4,11 +4,13 @@
   <title>Personal</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" type="text/css" href="stylesheets/application.css.scss">
+  <link rel="stylesheet" type="text/css" href="stylesheets/semantic_ui_customization.css.scss">
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%=link_to "Home", root_path%>
-<%=link_to "About", about_path%>
+<%= render 'layouts/header' %>
+
 <%= yield %>
 
 </body>
