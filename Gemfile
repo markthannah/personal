@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.6'
+ruby '2.2.1'
 
 gem 'rails', '4.2.1'
 gem 'sass-rails', '~> 5.0'
@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
 gem 'jquery-turbolinks'
+gem 'devise'
 
 
 group :development, :test do

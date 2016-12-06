@@ -1,4 +1,11 @@
 <div class="ui stackable menu navbottom">
   <%= link_to 'Home', root_path, class: "item" %>
   <%= link_to 'About', about_path, class: "item" %>
+
+<% if user_signed_in? %>
+  <%= link_to "Account Settings", edit_user_registration_path, class: "item" %>
+  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "item"%>
+<% else %>
+<% end %>
+
 </div>
