@@ -12,7 +12,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
 gem 'jquery-turbolinks'
 gem 'devise'
-
+gem 'paperclip', '~> 4.2'
+gem 'aws-sdk'
 
 group :development, :test do
   gem 'sqlite3'
