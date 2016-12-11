@@ -14,6 +14,7 @@ gem 'jquery-turbolinks'
 gem 'devise'
 gem 'paperclip', '~> 4.2'
 gem 'aws-sdk'
+gem 'masonry-rails'
 
 group :development, :test do
   gem 'sqlite3'
