@@ -1,31 +1,30 @@
-<div class="ui container">
+<div class="container">
 <div id="posts" class="transitions-enabled">
-  <div class="ui grid">
-  <% @posts.each do |post| %>
-    <div class="six wide column">
-    <div class="ui card">
-      <div class="image">
-        <%= image_tag post.image.url(:medium) %>
-      </div>
-        <div class="content">
-           <a class="header">
-             <%= link_to raw(post.title), post %>
-           </a>
-           <div class="description">
-             <%= raw post.description %>
+  <div class="card-columns-four relaxed">
+    <% @posts.each do |post| %>
+        <div class="box ui link card">
+          <div class="image">
+            <%= image_tag post.image.url(:medium) %>
+          </div>
+          <div class="content">
+             <div class="header">
+               <%= raw post.title %>
+             </div>
+             <div class="description">
+               <%= raw post.description %>
+             </div>
            </div>
           <% if post.user == current_user %>
-         <td><%= link_to 'Edit', edit_post_path(post) %></td>
-         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-       <% end %>
-     </div>
-    </div>
+           <%= link_to 'Edit', edit_post_path(post) %>
+           <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </div>
+    <% end %>
   </div>
-  <% end %>
 </div>
 </div>
 
-  <br>
+<div>
   <% if user_signed_in? %>
   <%= link_to 'New Post', new_post_path, class: "btn btn-primary" %>
   <% end %>

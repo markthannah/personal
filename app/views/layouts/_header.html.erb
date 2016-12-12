@@ -1,7 +1,7 @@
 <div class="ui stackable menu navbottom">
   <%= link_to 'Home', root_path, class: "item" %>
   <%= link_to 'About', about_path, class: "item" %>
-  <%= link_to 'Posts', posts_path, class: "item" %>
+  <%= link_to 'Posts', posts_path, class: "item", 'data-turbolinks' => false %>
 
 
 <% if user_signed_in? %>
