@@ -1,13 +1,15 @@
-<p id="notice"><%= notice %></p>
-  <%= image_tag @post.image.url %>
-  <%= @post.title %></br>
-  <%= @post.description%></br>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+    <%= image_tag @post.image.url %>
+    <%= @post.title %></br>
+    <%= @post.description%></br>
 
-  <% if @post.user == current_user %>
-    <%= link_to 'Edit', edit_post_path(@post) %>
+    <% if @post.user == current_user %>
+      <%= link_to 'Edit', edit_post_path(@post) %>
+    <% end %>
+
+  <%=link_to posts_path do %>
+    <h5><span class="glyphicon glyphicon-hand-left"></span>
+    All Posts</h5></br>
   <% end %>
-
-<%=link_to posts_path do %>
-  <h5><span class="glyphicon glyphicon-hand-left"></span>
-  All Posts</h5></br>
-<% end %>
+</div>

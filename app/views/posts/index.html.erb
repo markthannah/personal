@@ -2,6 +2,7 @@
 <div id="posts" class="transitions-enabled">
   <div class="card-columns-four relaxed">
     <% @posts.each do |post| %>
+      <%= link_to post_path(post) do %>
         <div class="box ui link card">
           <div class="image">
             <%= image_tag post.image.url(:medium) %>
@@ -19,6 +20,7 @@
            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
           <% end %>
         </div>
+      <% end %>
     <% end %>
   </div>
 </div>
