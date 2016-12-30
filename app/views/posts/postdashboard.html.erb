@@ -1,0 +1,53 @@
+<div class="container" style="margin-top:30px;">
+
+  <table class="ui celled padded table">
+    <thead>
+      <tr>
+      <th>Post</th>
+      <th>Description</th>
+      <th>Created</th>
+      <th>Last Edited</th>
+      <th>Active</th>
+    </tr></thead>
+
+    <% @posts.each do |post| %>
+      <%= link_to post_path(post) do %>
+    <tbody>
+      <tr>
+        <td>
+          <%= image_tag post.image.url(:medium) %>
+          <%= raw post.title %>
+        </td>
+
+        <td>
+          <%= truncate(post.description, :length => 125, :separator => " " )%>
+        </td>
+
+        <td>
+          <%= post.try(:created_at).try(:strftime, '%b %d, %Y - %I:%M %p %Z') %>
+        </td>
+
+        <td>
+          <%= post.try(:updated_at).try(:strftime, '%b %d, %Y - %I:%M %p %Z') %>
+        </td>
+
+        <td>
+          <%= post.active %>
+        </td>
+      </tr>
+      <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<% if user_signed_in? %>
+  <div class="ui grid" style="margin-top:30px;">
+    <div class="four column row">
+      <div class="right floated column">
+        <%= link_to 'New Post', new_post_path, class: "ui blue button" %>
+      </div>
+    </div>
+  </div>
+<% end %>
+</br></br></br></br></br></br></br></br></br></br></br></br>

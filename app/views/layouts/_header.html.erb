@@ -5,6 +5,7 @@
 
 
 <% if user_signed_in? %>
+  <%= link_to "Post Dashboard",postdashboard_path, class: "item"%>
   <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "item"%>
 <% else %>
 <% end %>

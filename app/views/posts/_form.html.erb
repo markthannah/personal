@@ -15,7 +15,12 @@
 
         <div class="field">
           <%= f.label :title %>
-          <%= f.text_area :title, placeholder: "Title" %>
+          <%= f.text_area :title, placeholder: "Title", rows: "2" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :active %>
+          <%= f.check_box :active %>
         </div>
 
         <div class="field">
@@ -30,12 +35,12 @@
 
         <div class="field">
           <%= f.label :created_at, "Post Created" %>
-          <%= @post.created_at.strftime("%b %d, %Y - %I:%M %p %Z") %>
+          <%= @post.try(:created_at).try(:strftime, '%b %d, %Y - %I:%M %p %Z') %>
         </div>
 
         <div class="field">
           <%= f.label :updated_at, "Post Last Updated" %>
-          <%= @post.updated_at.strftime("%b %d, %Y - %I:%M %p %Z") %>
+          <%= @post.try(:updated_at).try(:strftime, '%b %d, %Y - %I:%M %p %Z') %>
         </div>
 
         <div class="ui grid" style="margin-top:30px;">

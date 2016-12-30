@@ -5,6 +5,10 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    @posts = Post.active
+  end
+
+  def postdashboard
     @posts = Post.all
   end
 
@@ -70,7 +74,7 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :description, :image)
+      params.require(:post).permit(:title, :description, :image, :active)
     end
 
 end
