@@ -1,31 +1,45 @@
-<div class="ui container">
-  <p id="notice"><%= notice %></p>
+<% if user_signed_in? or @post.active == true %>
 
-    <div class="ui fluid image">
-      <%= image_tag @post.image.url %>
-    </div>
+  <div class="ui container">
+    <p id="notice"><%= notice %></p>
 
-    <h1 class="ui center aligned header">
-      <%= @post.title %></br>
-    </h1>
-
-    <p>
-    <%= @post.description%></br>
-    </p>
-
-  </br></br></br></br>
-  <%= link_to 'All Posts', posts_path, class: "ui green button", 'data-turbolinks' => false %>
-</div>
-
-
-<% if user_signed_in? %>
-  <div class="ui grid" style="margin-top:30px;">
-    <div class="four column row">
-      <div class="right floated column">
-        <%= link_to 'Edit', edit_post_path(@post), class: "ui blue button" %>
-        <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' }, class: "ui red button" %>
+      <div class="ui fluid image">
+        <%= image_tag @post.image.url %>
       </div>
+
+      <h1 class="ui center aligned header">
+        <%= @post.title %></br>
+      </h1>
+
+      <p>
+      <%= @post.description%></br>
+      </p>
+
+    </br></br></br></br>
+    <%= link_to 'All Posts', posts_path, class: "ui green button", 'data-turbolinks' => false %>
+  </div>
+
+  <% else %>
+
+  <div class="ui fluid container">
+    <div class="ui center aligned huge header" style="color: #a9a9a9; font-size: 2vw; padding-top: 20px;">
+      Sorry, nothing here at the moment
+      <i class="frown icon"></i>
+    </div>
+    <div class="ui fluid image">
+      <%= image_tag("deer") %>
     </div>
   </div>
-<% end %>
-</br></br>
+
+  <% end %>
+
+  <% if user_signed_in? %>
+    <div class="ui grid" style="margin-top:30px;">
+      <div class="four column row">
+        <div class="right floated column">
+          <%= link_to 'Edit', edit_post_path(@post), class: "ui blue button" %>
+          <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' }, class: "ui red button" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
