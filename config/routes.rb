@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :posts
+  resources :posts, param: :title
   devise_for :users
   devise_for :views
   root 'pages#home'

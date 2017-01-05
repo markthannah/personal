@@ -37,3 +37,11 @@ $widescreenMonitorBreakpoint : 1920px;
 .deer {
     width: 98%;
   }
+
+
+.mediumborder {
+  outline: 1px solid;
+  outline-color: #e3e4e4;
+  overflow-y: scroll;
+  height: 100px;
+}

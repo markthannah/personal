@@ -5,4 +5,7 @@ class Post < ActiveRecord::Base
 
    scope :active, -> { where(active: true) }
 
+   extend FriendlyId
+   friendly_id :title, use: :slugged
+
 end

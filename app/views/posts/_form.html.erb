@@ -30,7 +30,7 @@
 
         <div class="field">
           <%= f.label :description %>
-          <%= f.text_area :description, placeholder: "Description", rows: "7" %>
+          <%= f.text_area :description, class: "mediumborder editable", rows: "7" %>
         </div>
 
         <div class="field">
@@ -58,3 +58,17 @@
     </div>
   </div>
 </div>
+
+<script>
+  var editor = new MediumEditor('.editable', {
+      toolbar: {
+          buttons: [
+              'bold',
+              'italic',
+              'underline',
+              'unorderedlist',
+              'removeFormat'
+          ]
+      },
+  });
+</script>

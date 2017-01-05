@@ -15,6 +15,8 @@ gem 'devise'
 gem 'paperclip', '~> 4.2'
 gem 'aws-sdk'
 gem 'masonry-rails'
+gem 'friendly_id', '~> 5.1.0'
+gem 'medium-editor-rails'
 
 group :development, :test do
   gem 'sqlite3'
