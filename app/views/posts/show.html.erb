@@ -7,13 +7,17 @@
         <%= image_tag @post.image.url %>
       </div>
 
-      <h1 class="ui center aligned header">
-        <%= @post.title %></br>
-      </h1>
+      <div class="postheader">
+        <div class="ui center aligned header">
+          <%= @post.title %></br>
+        </div>
+      </div>
 
-      <p>
-      <%= raw @post.description%></br>
-      </p>
+      <div class="ui divider"></div>
+
+      <div class="postdescription">
+        <%= raw @post.description%></br>
+      </div>
 
     </br></br></br></br>
     <%= link_to 'All Posts', posts_path, class: "ui green button", 'data-turbolinks' => false %>

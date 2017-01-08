@@ -12,7 +12,7 @@
                  <%= raw post.title %>
                </div>
                <div class="description">
-                 <%= truncate(post.description, :length => 125, :separator => " " )%>
+                 <%= raw post.description.truncate(100) %>
                </div>
              </div>
           </div>

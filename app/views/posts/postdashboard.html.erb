@@ -24,7 +24,7 @@
         </td>
 
         <td>
-          <%= truncate(post.description, :length => 125, :separator => " " )%>
+          <%= raw post.description.truncate(100) %>
         </td>
 
         <td>
