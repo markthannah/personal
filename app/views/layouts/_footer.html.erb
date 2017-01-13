@@ -1,15 +1,15 @@
 <div class="ui inverted vertical footer segment">
     <div class="ui center aligned container">
-      <div class="ui stackable inverted divided grid">
-        <div class="sixteen wide column">
-          <h4 class="ui inverted header">My thoughts and stuff</h4>
-        </div>
-      </div>
-      <div class="ui inverted section divider"></div>
-      <div class="ui horizontal inverted small divided link list">
+      <div class="ui horizontal inverted small divided link list" style="margin-bottom:0px">
         <%= link_to 'Home', root_path, class: "item" %>
         <%= link_to 'About', about_path, class: "item" %>
         <%= link_to 'Posts', posts_path, class: "item", 'data-turbolinks' => false %>
+      </div>
+      <div class="ui inverted section divider divider_footer"></div>
+      <div class="ui stackable inverted divided grid">
+        <div class="sixteen wide column">
+          <p class="ui inverted">Copyright © 2017 Mark Hannah</p>
+        </div>
       </div>
     </div>
   </div>

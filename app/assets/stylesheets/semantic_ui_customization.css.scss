@@ -25,3 +25,27 @@
   text-align: right;;
   color: #a9a9a9 !important;
 }
+
+* {
+  margin: 0;
+  }
+
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -7em;
+}
+
+.footer, .push {
+  height: 7em;
+}
+
+.divider_footer {
+  margin-top: 10px !important;
+  margin-bottom: 14px !important;
+}
