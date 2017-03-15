@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Personal</title>
+    <% if content_for?(:title) %>
+      <%= content_for(:title) %>
+    <% else %>
+      <title>Mark Hannah</title>
+    <% end %>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <link rel="stylesheet" type="text/css" href="stylesheets/application.css.scss">
@@ -34,7 +39,7 @@
         js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));</script>
-      
+
     <div class="wrapper">
       <%= render 'layouts/header' %>
       <%= yield %>
