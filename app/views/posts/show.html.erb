@@ -19,7 +19,18 @@
         <%= raw @post.description%></br>
       </div>
 
-    </br></br></br></br>
+    </br></br>
+
+      <%= link_to "http://twitter.com/home?status=#{@post.title} #{post_url(@post)}",  title: 'Tweet Me!' do %>
+      <i class="huge twitter icon" data-content="Tweet me!"></i>
+      <% end %>
+
+      <%= link_to "https://www.facebook.com/sharer/sharer.php?u=#{post_url(@post)}",  title: 'Share Me!' do %>
+      <i class="huge facebook icon" data-content="Share Me!"></i>
+      <% end %>
+
+  </br></br>
+
     <%= link_to 'All Posts', posts_path, class: "ui green button", 'data-turbolinks' => false %>
   </div>
 

@@ -17,6 +17,9 @@ gem 'aws-sdk'
 gem 'masonry-rails'
 gem 'friendly_id', '~> 5.1.0'
 gem 'medium-editor-rails'
+gem 'social-share-button'
+gem 'shareable'
+
 
 group :development, :test do
   gem 'sqlite3'
