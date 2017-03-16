@@ -2,6 +2,11 @@
   <title> Mark Hannah: <%=@post.title%></title>
 <% end %>
 
+<% content_for :description do %>
+  <meta name="description" content="<%= raw @post.description.truncate(70) [3..-1]%>">
+<% end %>
+
+
 <% if user_signed_in? or @post.active == true %>
 
   <div class="ui container">

@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <% if content_for?(:title) %>
-      <%= content_for(:title) %>
-    <% else %>
-      <title>Mark Hannah</title>
-    <% end %>
+  <% if content_for?(:title) %>
+    <%= content_for(:title) %>
+  <% else %>
+    <title>Mark Hannah</title>
+  <% end %>
+
+  <% if content_for?(:description) %>
+    <%= content_for(:description) %>
+  <% else %>
+    <meta name="description" content="Mark Hannah's writings">
+  <% end %>
+
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
